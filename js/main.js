@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (scrollTimeout) {
         clearTimeout(scrollTimeout);
       }
-      document.body.classList.remove('intro-active');
     }
   };
 
@@ -68,13 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (scrollTimeout) {
           clearTimeout(scrollTimeout);
         }
-        document.body.classList.remove('intro-active');
-      }
-    } else if (scrollY <= 4) {
-      // Re-trigger the complete cinematic loop ONLY if they explicitly scroll back up to the absolute top
-      // after they've already completed/experienced the intro once.
-      if (hasCompletedFirstIntro && climaxTriggered && userScrolled) {
-        resetIntro();
       }
     }
   }, { passive: true });
@@ -110,9 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Lock the body scroll
-    document.body.classList.add('intro-active');
-
     // Rewind video and play it cleanly
     if (video) {
       video.loop = false;
@@ -123,7 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Ensure the video plays smoothly at full frame rate on page load
   if (video) {
-    document.body.classList.add('intro-active');
     video.play().catch(err => console.log("Muted autoplay started."));
 
     // Trigger reveal 0.8 seconds before the video ends (to align perfectly with the lineup sweep)
@@ -153,9 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
       inAutoScroll = true;
       scrollTimeout = setTimeout(() => {
         if (!userScrolled) {
-          // Remove the scroll lock class right before auto-scrolling
-          document.body.classList.remove('intro-active');
-
           const nextSection = document.getElementById('opening');
           if (nextSection) {
             nextSection.scrollIntoView({ behavior: 'smooth' });
@@ -169,7 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }, 2500);
     } else {
-      document.body.classList.remove('intro-active');
       hasCompletedFirstIntro = true;
     }
 
