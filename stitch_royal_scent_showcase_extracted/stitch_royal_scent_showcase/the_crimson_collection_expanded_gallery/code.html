@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velora - The Collection</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#1c1b1b",
+                    "primary-fixed": "#ffe088",
+                    "surface-variant": "#333535",
+                    "on-background": "#e2e2e2",
+                    "outline": "#99907c",
+                    "on-tertiary-fixed-variant": "#474646",
+                    "primary-container": "#d4af37",
+                    "background": "#121414",
+                    "on-tertiary-container": "#464545",
+                    "on-primary-container": "#554300",
+                    "secondary-fixed": "#e5e2e1",
+                    "on-surface": "#e2e2e2",
+                    "surface-container": "#1e2020",
+                    "secondary": "#c8c6c5",
+                    "surface-bright": "#38393a",
+                    "surface-container-highest": "#333535",
+                    "primary": "#f2ca50",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-error-container": "#ffdad6",
+                    "on-surface-variant": "#d0c5af",
+                    "on-secondary-container": "#b7b5b4",
+                    "on-tertiary": "#313030",
+                    "inverse-on-surface": "#2f3131",
+                    "tertiary-fixed-dim": "#c9c6c5",
+                    "surface-container-high": "#282a2b",
+                    "on-primary-fixed": "#241a00",
+                    "secondary-container": "#474646",
+                    "tertiary": "#d0cecd",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "tertiary-fixed": "#e5e2e1",
+                    "inverse-primary": "#735c00",
+                    "on-secondary": "#313030",
+                    "surface-tint": "#e9c349",
+                    "error": "#ffb4ab",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface-dim": "#121414",
+                    "outline-variant": "#4d4635",
+                    "surface-container-low": "#1a1c1c",
+                    "on-error": "#690005",
+                    "error-container": "#93000a",
+                    "surface": "#121414",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "surface-container-lowest": "#0c0f0f",
+                    "tertiary-container": "#b5b2b2",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-primary": "#3c2f00",
+                    "inverse-surface": "#e2e2e2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "margin-desktop": "80px",
+                    "margin-mobile": "20px",
+                    "container-max-width": "1440px",
+                    "gutter": "32px",
+                    "margin-tablet": "40px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": [
+                            "Bodoni Moda"
+                    ],
+                    "headline-lg": [
+                            "Bodoni Moda"
+                    ],
+                    "body-lg": [
+                            "Montserrat"
+                    ],
+                    "display-lg": [
+                            "Bodoni Moda"
+                    ],
+                    "body-md": [
+                            "Montserrat"
+                    ],
+                    "headline-md": [
+                            "Bodoni Moda"
+                    ],
+                    "label-caps": [
+                            "Montserrat"
+                    ]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "32px",
+                                    "letterSpacing": "0.01em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg": [
+                            "80px",
+                            {
+                                    "lineHeight": "90px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.2em",
+                                    "fontWeight": "600"
+                            }
+                    ]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 300,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container antialiased">
+<!-- TopNavBar -->
+<header class="bg-background/90 dark:bg-background/90 backdrop-blur-md sticky full-width top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max-width mx-auto">
+<!-- Mobile Menu Toggle (Decorative) -->
+<div class="md:hidden flex items-center">
+<span class="material-symbols-outlined text-on-surface hover:text-primary transition-colors cursor-pointer">menu</span>
+</div>
+<!-- Brand Logo -->
+<a class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg tracking-widest text-primary dark:text-primary" href="#">
+                VELORA
+            </a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-primary dark:text-primary border-b border-primary pb-1" href="#">
+                    The Collection
+                </a>
+<a class="font-label-caps text-label-caps text-on-surface dark:text-on-surface hover:text-primary-fixed transition-colors duration-300" href="#">
+                    Our Story
+                </a>
+<a class="font-label-caps text-label-caps text-on-surface dark:text-on-surface hover:text-primary-fixed transition-colors duration-300" href="#">
+                    Bespoke Scents
+                </a>
+<a class="font-label-caps text-label-caps text-on-surface dark:text-on-surface hover:text-primary-fixed transition-colors duration-300" href="#">
+                    Boutiques
+                </a>
+</nav>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-6">
+<button aria-label="shopping_bag" class="scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined hover:text-primary dark:hover:text-primary-fixed cursor-pointer transition-all text-on-surface">shopping_bag</span>
+</button>
+<button aria-label="person" class="scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined hover:text-primary dark:hover:text-primary-fixed cursor-pointer transition-all text-on-surface">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center w-full">
+<!-- Hero Section -->
+<section class="w-full max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-[80px] md:py-[120px] flex flex-col md:flex-row gap-gutter items-center">
+<div class="w-full md:w-5/12 flex flex-col items-start gap-6 z-10 relative">
+<div class="w-10 h-px bg-primary-container mb-4"></div>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary leading-tight">The Crimson<br/><span class="italic text-on-surface font-light">Legacy</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md font-light leading-relaxed">A bold symphony of spicy saffron and deep damask rose. Crafted for those who lead with passion and leave a trail of fire.</p>
+<div class="mt-8">
+<button class="px-8 py-4 bg-background border border-primary-container text-primary font-label-caps text-label-caps tracking-[0.2em] uppercase hover:bg-primary hover:text-on-primary transition-colors duration-300">
+                        View Editorial
+                    </button>
+</div>
+</div>
+<div class="w-full md:w-7/12 relative aspect-[4/3] md:aspect-[16/9] overflow-hidden group">
+<div class="absolute inset-0 bg-primary-container/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl rounded-full z-0"></div>
+<img alt="The Velora Collection" class="w-full h-full object-cover object-center relative z-10 opacity-90 brightness-90 group-hover:brightness-100 group-hover:scale-[1.02] transition-all duration-1000 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnnJg06qHZkSzAfDcfiuZtDKQ6EeB5Wq5GKG1BnRibcUN9g-I4cPsWU-IqAixN7O_0bhhV-pFjuNhG8F7VRfJNfp_kFONTrQBRsmE1RwTHCe0DOkq5JTkAYN8imTNuQvnDYtMPDtUI1PpgqzpRNr26fjdSD53zt6my4tLwa6qhCBwnG3svmleFQQgQrCgWij26Ny6siznQdzTTTJGdXuIwvAOrSlkhmOKkMd_Na21pco6f74MzV0XDg7f2RVmlaLGk8-qYxzG977U"/>
+<div class="absolute inset-0 border border-outline-variant/30 pointer-events-none z-20"></div>
+</div>
+</section>
+<!-- Product Grid Section -->
+<section class="w-full max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-[80px] md:py-[120px]">
+<div class="flex flex-col items-center text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">The Collection</h2>
+<div class="w-16 h-px bg-primary-container"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Product Card 1: Royal Rubis -->
+<article class="group flex flex-col bg-surface-container-low transition-all duration-500 hover:-translate-y-1 relative overflow-hidden">
+<div class="absolute inset-0 border border-transparent group-hover:border-primary-container transition-colors duration-500 pointer-events-none z-20"></div>
+<div class="w-full aspect-[4/5] relative bg-[#0a0a0a] overflow-hidden flex items-center justify-center p-8">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.08)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-0"></div>
+<img alt="Royal Rubis" class="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700 ease-out drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChbW0b4Dtt_5rijIjmEDZ6C968Vci3h7h0WysZZA1axVlvZimbZXlAw1yPYCfCl6IZVG8aMvlq5W7wVn-BXeaJdUwBr1sdumLj1RGeCZEZWzp4hREtLr2f6LlQ0KUK9Y36a2xH5nRZgGasWbrJlDJU34eGkIXFINuu6vzlXjRmkZfFAmXqDP1cb2l2cMntKQqew3Ael4mHHkaPJOmkMBwscTbwdjVlh0kDQNSlT8twZCuSWGPnd3qU2vcK-hK1zhhI07FjYgUtQCs"/>
+</div>
+<div class="p-8 flex flex-col items-center text-center bg-surface-container-low relative z-10">
+<span class="font-label-caps text-[10px] text-outline mb-2 tracking-widest uppercase">Resinous &amp; Warm</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">Royal Rubis</h3>
+<button class="relative pb-1 font-label-caps text-label-caps text-primary uppercase group/btn overflow-hidden">
+<span class="relative z-10">Explore Scent</span>
+<div class="absolute bottom-0 left-0 w-full h-[1px] bg-surface-variant group-hover/btn:bg-primary transition-colors duration-300"></div>
+</button>
+</div>
+</article>
+<!-- Product Card 2: Saffron Sultan -->
+<article class="group flex flex-col bg-surface-container-low transition-all duration-500 hover:-translate-y-1 relative overflow-hidden">
+<div class="absolute inset-0 border border-transparent group-hover:border-primary-container transition-colors duration-500 pointer-events-none z-20"></div>
+<div class="w-full aspect-[4/5] relative bg-[#0a0a0a] overflow-hidden flex items-center justify-center p-8">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.08)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-0"></div>
+<img alt="Saffron Sultan" class="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700 ease-out drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP0vcj5vq_uAbuWLlJ85kmlU3f7a19k8vQomGlNQW5LPE-mX15TbWHSc31G-dQYGwKp_rKk3x8n2f6qov6IsJMffyHlCY1NvrWSC11v3jleV7bIIrzv-ccRoQpoOOb8GemfwIjuDzpBKvCVZrcTnBHBYEj337FAvgDSH5l3lNoSog-hfFAJl_9vk0AGQiizEyIzXyYl7SZVZn4N5giq67lJM9bilM8cEBETdhL-WUXBxM-d6YZBo4ey8RZW1tOlesWEz9sAyCJj3M"/>
+</div>
+<div class="p-8 flex flex-col items-center text-center bg-surface-container-low relative z-10">
+<span class="font-label-caps text-[10px] text-outline mb-2 tracking-widest uppercase">Woody &amp; Bold</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">Saffron Sultan</h3>
+<button class="relative pb-1 font-label-caps text-label-caps text-primary uppercase group/btn overflow-hidden">
+<span class="relative z-10">Explore Scent</span>
+<div class="absolute bottom-0 left-0 w-full h-[1px] bg-surface-variant group-hover/btn:bg-primary transition-colors duration-300"></div>
+</button>
+</div>
+</article>
+<!-- Product Card 3: Oud Obsidian -->
+<article class="group flex flex-col bg-surface-container-low transition-all duration-500 hover:-translate-y-1 relative overflow-hidden">
+<div class="absolute inset-0 border border-transparent group-hover:border-primary-container transition-colors duration-500 pointer-events-none z-20"></div>
+<div class="w-full aspect-[4/5] relative bg-[#0a0a0a] overflow-hidden flex items-center justify-center p-8">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.08)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-0"></div>
+<img alt="Oud Obsidian" class="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700 ease-out drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2ORwrOjCiRR13eEGWL4kQrdzh2hqxprZ95mOs0q9iAHAlah6Aj1D1fjX3u-s29SCBr9DY3N5QYAv2KPCkShyQT92P5bcdSteU8IH-GsMlcrZYAb5LWPSfMOn6KzQ9MSphlBJBV6taxeuy1FR8N9WbHHL8sGmXblhDkVSf38o-2FnQgnCMI_OpnQgqFfyHQcLw6sbUAjLOOHAJjv6CPuFGIb8meU2VgBQyhjzFXg2TtIPseh6aycVnnAAyYSvg7-1929fWQnveb-I"/>
+</div>
+<div class="p-8 flex flex-col items-center text-center bg-surface-container-low relative z-10">
+<span class="font-label-caps text-[10px] text-outline mb-2 tracking-widest uppercase">Smoky &amp; Floral</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">Oud Obsidian</h3>
+<button class="relative pb-1 font-label-caps text-label-caps text-primary uppercase group/btn overflow-hidden">
+<span class="relative z-10">Explore Scent</span>
+<div class="absolute bottom-0 left-0 w-full h-[1px] bg-surface-variant group-hover/btn:bg-primary transition-colors duration-300"></div>
+</button>
+</div>
+</article>
+<!-- Product Card 4: Imperial Garnet -->
+<article class="group flex flex-col bg-surface-container-low transition-all duration-500 hover:-translate-y-1 relative overflow-hidden">
+<div class="absolute inset-0 border border-transparent group-hover:border-primary-container transition-colors duration-500 pointer-events-none z-20"></div>
+<div class="w-full aspect-[4/5] relative bg-[#0a0a0a] overflow-hidden flex items-center justify-center p-8">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.08)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-0"></div>
+<img alt="Imperial Garnet" class="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700 ease-out drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3A9IB4nZqmXg4iEzRIE_iPldV48fSOi5QA4Id_m-1qcLCBkhJBP_gOAhUu08uOTBOW7U8npiFslU5C0_a9G23Yh0iOjg0wX_dBOmDMFWSytGfqrAXwNx5tkT5Zh3ubmrwoM1DlQPPB-ecQg8E6Pq0zLxyIc04sXkUK_3lILnmV3z82YmW6QnLh5gp2CLWNlCaU2VkZdHdfqqVjqgBQlvIUqY4ehSQseKPQirMsBrc0m7mSsJT7u_76UNuhq04D4wQR9JS9h3djHY"/>
+</div>
+<div class="p-8 flex flex-col items-center text-center bg-surface-container-low relative z-10">
+<span class="font-label-caps text-[10px] text-outline mb-2 tracking-widest uppercase">Smooth &amp; Elegant</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">Imperial Garnet</h3>
+<button class="relative pb-1 font-label-caps text-label-caps text-primary uppercase group/btn overflow-hidden">
+<span class="relative z-10">Explore Scent</span>
+<div class="absolute bottom-0 left-0 w-full h-[1px] bg-surface-variant group-hover/btn:bg-primary transition-colors duration-300"></div>
+</button>
+</div>
+</article>
+<!-- Product Card 5: Midnight Malbec -->
+<article class="group flex flex-col bg-surface-container-low transition-all duration-500 hover:-translate-y-1 relative overflow-hidden">
+<div class="absolute inset-0 border border-transparent group-hover:border-primary-container transition-colors duration-500 pointer-events-none z-20"></div>
+<div class="w-full aspect-[4/5] relative bg-[#0a0a0a] overflow-hidden flex items-center justify-center p-8">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.08)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-0"></div>
+<img alt="Midnight Malbec" class="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700 ease-out drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWnWkOvlQhVfwWDAEmBmci965oCFg_9Uc3QMatYH5QrRdRJyxiNX27iGkq8WIwOSqOQ-4OvIRo566pRzrhmjkhaWawXHSYoCRB7VYF7NKntwwb7KPDKiZApXzAKLj5_6vhD4Ns7jlzInzW-p5LcvtN1zNWJvLpOJmWibujRmCdGrTdvE9YAtAqu7jru9gQPKhtHzr3ranVb-0ai0ZxrjxfzUAVVgd0DqD1BtF2bQC2LuXSjeKGCUI6inigCVpmV4UMInuChcE8qEw"/>
+</div>
+<div class="p-8 flex flex-col items-center text-center bg-surface-container-low relative z-10">
+<span class="font-label-caps text-[10px] text-outline mb-2 tracking-widest uppercase">Intense &amp; Royal</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">Midnight Malbec</h3>
+<button class="relative pb-1 font-label-caps text-label-caps text-primary uppercase group/btn overflow-hidden">
+<span class="relative z-10">Explore Scent</span>
+<div class="absolute bottom-0 left-0 w-full h-[1px] bg-surface-variant group-hover/btn:bg-primary transition-colors duration-300"></div>
+</button>
+</div>
+</article>
+<!-- Product Card 6: Sunset Sillage -->
+<article class="group flex flex-col bg-surface-container-low transition-all duration-500 hover:-translate-y-1 relative overflow-hidden">
+<div class="absolute inset-0 border border-transparent group-hover:border-primary-container transition-colors duration-500 pointer-events-none z-20"></div>
+<div class="w-full aspect-[4/5] relative bg-[#0a0a0a] overflow-hidden flex items-center justify-center p-8">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.08)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-0"></div>
+<img alt="Sunset Sillage" class="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700 ease-out drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_IBr83nry4ZlC81zFDr_Qqr-dxkkUWpkoLJZsQ1-niUDH14Rgrb7eO56k4HeWxWqlNkpWqqkMlvOVU-MFKXClKiJM5gHxeUvNOhMdCicSY5xeS3gNIjMqlYvx7QBF6WybIE9b8FsPw7HPWvlvrarwu8cQTAGN2nZMBkU8p6Yn5UmjqIohKAHMgR6dengnTDKNIF5N1NeEEnZwLXe2WmbomxiDDmUJtHTIvON94DriP1Mm4R_EkW5BpAnINVT8_-vgMJbGzKQqjRU"/>
+</div>
+<div class="p-8 flex flex-col items-center text-center bg-surface-container-low relative z-10">
+<span class="font-label-caps text-[10px] text-outline mb-2 tracking-widest uppercase">Graceful &amp; Warm</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">Sunset Sillage</h3>
+<button class="relative pb-1 font-label-caps text-label-caps text-primary uppercase group/btn overflow-hidden">
+<span class="relative z-10">Explore Scent</span>
+<div class="absolute bottom-0 left-0 w-full h-[1px] bg-surface-variant group-hover/btn:bg-primary transition-colors duration-300"></div>
+</button>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full mt-auto">
+<div class="border-t border-outline-variant/20 dark:border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-16 max-w-container-max-width mx-auto">
+<!-- Brand Column -->
+<div class="flex flex-col gap-4 col-span-1 md:col-span-2">
+<span class="font-headline-md text-headline-md text-primary dark:text-primary">
+                        VELORA
+                    </span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mt-4">
+                        Crafting olfactory masterpieces for the discerning individual. Experience the pinnacle of dark opulence.
+                    </p>
+</div>
+<!-- Links Column -->
+<div class="flex flex-col gap-4 col-span-1">
+<h4 class="font-label-caps text-label-caps text-primary dark:text-primary mb-2">Information</h4>
+<nav class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary-fixed dark:hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">
+                            Privacy Policy
+                        </a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary-fixed dark:hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">
+                            Terms of Service
+                        </a>
+</nav>
+</div>
+<!-- Support Column -->
+<div class="flex flex-col gap-4 col-span-1">
+<h4 class="font-label-caps text-label-caps text-primary dark:text-primary mb-2">Support</h4>
+<nav class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary-fixed dark:hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">
+                            Shipping &amp; Returns
+                        </a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary-fixed dark:hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">
+                            Contact Us
+                        </a>
+</nav>
+</div>
+</div>
+<!-- Copyright Banner -->
+<div class="w-full border-t border-outline-variant/10 px-margin-mobile md:px-margin-desktop py-6 flex justify-center md:justify-start">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">
+                    © 2024 VELORA PARFUMERIE. ALL RIGHTS RESERVED.
+                </span>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Gold Collection | VELORA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#38393a",
+                        "outline-variant": "#4d4635",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-variant": "#333535",
+                        "on-surface-variant": "#d0c5af",
+                        "tertiary-container": "#b5b2b2",
+                        "on-error": "#690005",
+                        "on-background": "#e2e2e2",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-surface": "#e2e2e2",
+                        "surface": "#121414",
+                        "primary-container": "#d4af37",
+                        "on-tertiary": "#313030",
+                        "inverse-primary": "#735c00",
+                        "surface-container-low": "#1a1c1c",
+                        "inverse-surface": "#e2e2e2",
+                        "on-secondary": "#313030",
+                        "on-primary-fixed": "#241a00",
+                        "background": "#121414",
+                        "surface-container-high": "#282a2b",
+                        "on-primary-container": "#554300",
+                        "error-container": "#93000a",
+                        "inverse-on-surface": "#2f3131",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-primary-fixed-variant": "#574500",
+                        "tertiary": "#d0cecd",
+                        "outline": "#99907c",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-container": "#1e2020",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "secondary-container": "#474746",
+                        "primary-fixed": "#ffe088",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "tertiary-fixed-dim": "#c9c6c5",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "secondary": "#c8c6c5",
+                        "surface-container-lowest": "#0c0f0f",
+                        "surface-dim": "#121414",
+                        "on-secondary-container": "#b7b5b4",
+                        "surface-tint": "#e9c349",
+                        "on-tertiary-container": "#464545",
+                        "surface-container-highest": "#333535",
+                        "primary": "#f2ca50",
+                        "on-primary": "#3c2f00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px",
+                        "gutter": "32px",
+                        "container-max-width": "1440px",
+                        "margin-tablet": "40px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Montserrat"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "display-lg": ["Bodoni Moda"],
+                        "headline-lg-mobile": ["Bodoni Moda"],
+                        "body-md": ["Montserrat"],
+                        "label-caps": ["Montserrat"],
+                        "headline-md": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
+                        "display-lg": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.2em", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0A0A0A;
+            color: #e2e2e2;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .gold-glow {
+            box-shadow: 0 0 40px 5px rgba(212, 175, 55, 0.08);
+        }
+        .gold-border-bottom {
+            border-bottom: 1px solid #4d4635;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 3px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #d4af37;
+        }
+    </style>
+</head>
+<body class="custom-scrollbar overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex justify-between items-center w-full px-margin-desktop py-6 max-w-container-max-width mx-auto">
+<div class="flex items-center gap-12">
+<a class="font-headline-lg text-headline-lg tracking-widest text-primary" href="#">VELORA</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1" href="#">The Collection</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-primary transition-colors duration-300" href="#">Our Story</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-primary transition-colors duration-300" href="#">Bespoke Scents</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-primary transition-colors duration-300" href="#">Boutiques</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">search</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">person</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">shopping_bag</span>
+</div>
+</div>
+</nav>
+<main class="mt-24">
+<!-- Hero Section -->
+<section class="relative h-[80vh] flex items-center overflow-hidden mb-32">
+<div class="absolute inset-0 z-0">
+<img alt="The Gold Standard Hero" class="w-full h-full object-cover opacity-80 scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdvUkW3_4mL7K_nmGauHU77qNt7l1ADbstQVAmWVZJOintAp9g3KJcS1XMCFLBj86ly3IwGnIklK6Q3dlyMdaW0iRIHyfn9evhSfQFyrrlX0giGq8UYYxXry_2Oy1XPCBGefbiRuqbm15LIn4RlnpWYNZBkMbk40B-WSyViSm5NlElIk50cYRIgCpQ17NgigoXLPAgj-VErraY4S6wvkDCwbrYEl2muNTYqKQUiBZlO_MrRa3z7dIb8DaYkMrvXU-SaAWJnkYfg0Q"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max-width mx-auto w-full">
+<div class="max-w-2xl">
+<span class="font-label-caps text-label-caps text-primary mb-4 block tracking-[0.4em]">HAUTE PARFUMERIE</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-6 leading-tight">The Gold Standard</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md italic border-l border-primary pl-6">
+                        A symphony of liquid radiance. Discover our most exclusive range, where every drop captures the essence of pure luxury.
+                    </p>
+<div class="mt-12">
+<button class="px-10 py-4 bg-transparent border border-primary text-primary font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all duration-500 tracking-widest">
+                            EXPLORE THE VAULT
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Header -->
+<section class="px-margin-desktop max-w-container-max-width mx-auto mb-16">
+<div class="flex flex-col items-center text-center">
+<div class="h-12 w-[1px] bg-primary mb-8"></div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">The Gold Collection</h2>
+<div class="w-16 h-[1px] bg-primary/30 mb-12"></div>
+</div>
+</section>
+<!-- Grid Section (Bento Inspired) -->
+<section class="px-margin-desktop max-w-container-max-width mx-auto mb-32">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Product 1: Aureum Rose -->
+<div class="md:col-span-7 group cursor-pointer">
+<div class="relative aspect-[16/10] bg-surface-container overflow-hidden gold-glow transition-all duration-700">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A luxurious rose-gold perfume bottle resting on a reflective black marble surface. Soft, warm pink and gold lighting illuminates the delicate glass curves, while a mist of floral essence dances in the dark, opulent atmosphere. The aesthetic is sophisticated, feminine, and deeply sensory with a high-end editorial feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRC5MN5MihCne3pXeuyYlf5G0uMuaxsNSvmuTviep4DM7qIV2bO5bMJXL3SBab8wNMByAXOQp01BRQ9BmKlhb5-T-_jB1gDORKR4jt7epVnxwiFZ2yHpW3qafAVqtQphA0JCQk2RxOs-KDYrWCuGgu2Hfy5JtRj_jMhS2P9qW4r7w3l0XoqwXfa8WVB7tOUR4oNly1JP3OdnxCgTpQhrKZxYrU88RhU2RrhPtlU9wStXNKIDvuRjEy4eRSRdg-tPP4eOMqh3ZT02Y"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500"></div>
+<div class="absolute bottom-8 left-8">
+<span class="font-label-caps text-label-caps text-primary/80 mb-2 block">ROSE GOLD</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Aureum Rose</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Floral &amp; Warm</p>
+</div>
+<div class="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center bg-background/50">
+<span class="material-symbols-outlined text-primary">arrow_outward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product 2: Champagne Solace -->
+<div class="md:col-span-5 group cursor-pointer">
+<div class="relative aspect-square bg-surface-container overflow-hidden gold-glow transition-all duration-700">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A sleek, minimalist perfume bottle with a light champagne gold hue, set against a dark obsidian background. Effervescent bubbles of gold light surround the bottle, suggesting a crisp and airy scent profile. Sharp, high-contrast studio lighting highlights the metallic cap and clear glass texture in a premium boutique style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaTcU2bnPoq1BYeoeFkoBsDf-8q9rehUtTK58o1_WU2EnN6Dpry3Vw90_xvP3_pFV-Vi2OVuLyeHuy1DS2EJeYbdi5gBvrPOmB9zSFzTjzrkiPolPofFq-kTKysRFhu3moIdR10e7mc3Wzf53U7O2hMpkj2Sx4y0DlWwDRFf7-gcP7aj_199OsTuWtqqiUob386jsji2Q6MX1eGHXaPmg3ZVzUc0aCACjqOSBX3ekmtNXA1C4Ujp8EWmJua145FY9NURhC3Nsfs3c"/>
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-500"></div>
+<div class="absolute bottom-8 left-8">
+<span class="font-label-caps text-label-caps text-primary/80 mb-2 block">CHAMPAGNE GOLD</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Champagne Solace</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Crisp &amp; Effervescent</p>
+</div>
+</div>
+</div>
+<!-- Product 3: Eternal 24K -->
+<div class="md:col-span-5 group cursor-pointer">
+<div class="relative aspect-square bg-surface-container overflow-hidden gold-glow transition-all duration-700">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A bold, heavy-weight glass perfume bottle containing a rich, amber-colored yellow gold liquid. The setting is a dark, exclusive club atmosphere with deep shadows and intense golden highlights. The visual focuses on the craftsmanship and the bold, resinous nature of the scent, using extreme close-ups of the gold engraving." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOPKQuHF8zRdACJGOjuPsJigu_XhUmDZKC__t7FyoXDdyel8TUIsosv09lrkud5UcvGWcE2x1DmRABR8DdzLCgTNw84XbTrNihzRj8r9SY_I5He3ZpBsojrHugRXKwrOkbCaO70M3NlOY3SGIlD21099UXKrDRiajL9GNjsuSpuExxgFGxefgo8sfJfaaWkW-SP-MAT4zzDmuV_sMqAPxyAfnxcdcR7QZwQPhbonIo6wO3x0UlWsBPiQ1QvCKN5WNpqcHKxyLBrG0"/>
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-500"></div>
+<div class="absolute bottom-8 left-8">
+<span class="font-label-caps text-label-caps text-primary/80 mb-2 block">YELLOW GOLD</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Eternal 24K</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Bold &amp; Resinous</p>
+</div>
+</div>
+</div>
+<!-- Product 4: White Gold Mirage -->
+<div class="md:col-span-7 group cursor-pointer">
+<div class="relative aspect-[16/10] bg-surface-container overflow-hidden gold-glow transition-all duration-700">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A pristine white-gold perfume bottle appearing almost ethereal against a deep charcoal background. The lighting is cool and high-key, creating a clean, silvery-gold luminescence. Soft shadows and a slight frost effect on the glass convey a sense of purity and ethereal lightness in a minimalist fashion photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwmz0o2rXamBfsna8onbcroAUTA-bKafA383-0pxuqZM5F89NQtGry3-Yv0s_GjRWpVKp1Ocwi2Js2LU-n6vzvCLAyAbhJSBxpHKxogRKBIVRKkLGLj7HfIdFC2J9Gyzhma8jP1xrThzKhdic4txgP3bBRcnjMMVAGQSZwcQtPoJ2NB4C1DAmiIDB645oaoUdL1F78KVdU66qF11fAn0BD5DmkmSL_tJ9liOBfbfle26sn3oxqo-W6XimN5lTLIHSEmj1CgsQ-4_A"/>
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-500"></div>
+<div class="absolute bottom-8 left-8">
+<span class="font-label-caps text-label-caps text-primary/80 mb-2 block">WHITE GOLD</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">White Gold Mirage</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Clean &amp; Ethereal</p>
+</div>
+<div class="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center bg-background/50">
+<span class="material-symbols-outlined text-primary">arrow_outward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Bespoke Section -->
+<section class="bg-surface-container-low py-32 border-t border-b border-outline-variant/10">
+<div class="px-margin-desktop max-w-container-max-width mx-auto flex flex-col md:flex-row items-center justify-between gap-16">
+<div class="md:w-1/2">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Create Your Own Legacy</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Experience our Bespoke Atelier where our master perfumers craft a signature scent unique to your gold-hued aura.</p>
+<a class="inline-flex items-center gap-4 font-label-caps text-label-caps text-primary hover:gap-6 transition-all duration-300" href="#">
+                        BOOK A CONSULTATION <span class="material-symbols-outlined">east</span>
+</a>
+</div>
+<div class="md:w-1/3 w-full">
+<div class="relative pb-2 border-b border-outline-variant group">
+<label class="font-label-caps text-[10px] text-outline uppercase block mb-2">Inner Circle Access</label>
+<input class="w-full bg-transparent border-none p-0 text-on-surface placeholder:text-outline-variant font-body-md focus:ring-0" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+<div class="absolute bottom-0 left-0 h-[1px] w-0 bg-primary group-focus-within:w-full transition-all duration-700"></div>
+<button class="absolute right-0 bottom-2 text-primary">
+<span class="material-symbols-outlined">mail</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-16 max-w-container-max-width mx-auto">
+<div class="flex flex-col gap-8">
+<span class="font-headline-md text-headline-md text-primary">VELORA</span>
+<p class="font-body-md text-body-md text-on-surface-variant">The definitive source for luxury scents, blending traditional mastery with avant-garde vision.</p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-primary mb-2">EXPLORE</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">The Collection</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Bespoke Scents</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Boutiques</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-primary mb-2">CUSTOMER CARE</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Shipping &amp; Returns</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Us</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-primary mb-2">FOLLOW US</span>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">hub</span></a>
+</div>
+</div>
+</div>
+<div class="px-margin-desktop py-8 border-t border-outline-variant/10 text-center">
+<p class="font-label-caps text-[10px] text-on-surface-variant tracking-[0.2em]">© 2024 VELORA PARFUMERIE. ALL RIGHTS RESERVED.</p>
+</div>
+</footer>
+</body></html>

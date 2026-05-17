@@ -1,0 +1,22 @@
+{
+  "name": "velora-luxury-maison",
+  "version": "1.0.0",
+  "description": "VELORA — The Luxury Perfume Era flagship static website and concierge checkout system.",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 8080 -c-1",
+    "dev": "http-server -p 8080 -c-1 -o"
+  },
+  "keywords": [
+    "luxury",
+    "perfume",
+    "velora",
+    "royal",
+    "concierge"
+  ],
+  "author": "Velora Atelier",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}

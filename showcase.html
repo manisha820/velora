@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>The Collections Showcase | VELORA</title>
+  <meta name="description" content="Discover the Velora Fragrance Collections. Immersive, high-fashion sensory masterpieces curated in Gold, Crimson, and Midnight legacies." />
+  
+  <!-- Base Core Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/product.css" />
+
+  <!-- Fonts & Material Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  
+  <!-- Tailwind CSS (Structural & Responsive Layouts Only) -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#d4af37",
+            "primary-container": "#ffe088",
+            background: "#0A0A0A",
+            "surface-container": "#151515",
+            "surface-container-low": "#0F0F0F",
+            "outline-variant": "#2a2720"
+          },
+          fontFamily: {
+            sans: ["Montserrat", "sans-serif"],
+            serif: ["Bodoni Moda", "serif"]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Premium visual overrides */
+    body {
+      background-color: #0E0507;
+      color: #e2e2e2;
+      transition: background-color 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+      overflow-x: hidden;
+    }
+    
+    /* Interactive cursor styling support */
+    #cursor {
+      background-color: #d4af37;
+    }
+    #cursor-trail {
+      border: 1px solid #d4af37;
+    }
+
+    /* Custom scrollbars for high-end feel */
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #050505;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #d4af37;
+      border-radius: 2px;
+    }
+
+    /* Custom luxury highlights */
+    .gold-glow {
+      box-shadow: 0 0 50px -10px rgba(212, 175, 55, 0.1);
+    }
+    .crimson-glow {
+      box-shadow: 0 0 50px -10px rgba(196, 30, 58, 0.1);
+    }
+    .midnight-glow {
+      box-shadow: 0 0 50px -10px rgba(15, 82, 186, 0.1);
+    }
+
+    .reveal-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .reveal-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="product-page selection:bg-primary/20 selection:text-primary">
+
+  <!-- ── CUSTOM CURSOR ── -->
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+
+  <!-- Cinematic curtain that starts closed and sweeps UP on load -->
+  <div id="showcase-curtain" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: #0A0A0A; z-index: 99999; transform: translateY(0%); transition: transform 1s cubic-bezier(0.85, 0, 0.15, 1); pointer-events: none; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+    <div id="showcase-logo" style="font-family: 'Bodoni Moda', serif; font-size: 3.5rem; color: #D4AF37; letter-spacing: 0.4em; text-indent: 0.4em; opacity: 1; transition: opacity 0.4s ease, transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); transform: scale(1) translateY(0);">
+      VELORA
+    </div>
+  </div>
+
+  <!-- Floating Ambient Overlays -->
+  <div id="ambient-overlay" style="position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: 0.75; transition: background 1.5s cubic-bezier(0.25, 1, 0.5, 1); background: radial-gradient(circle at 50% 50%, rgba(196,30,58,0.05) 0%, transparent 70%);"></div>
+
+  <!-- ── TOP NAVIGATION ── -->
+  <nav class="product-nav" id="product-nav" style="background: rgba(10,10,10,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.03); z-index: 50;">
+    <div class="nav-left">
+      <a href="index.html" class="nav-link nav-back">
+        <span class="material-symbols-outlined">arrow_back</span>
+        <span>Maison</span>
+      </a>
+    </div>
+    <div class="nav-center">
+      <a href="index.html" class="nav-logo" style="font-family: 'Bodoni Moda', serif; letter-spacing: 0.3em;">VELORA</a>
+    </div>
+    <div class="nav-right">
+      <a href="#crimson-collection" class="nav-link">Crimson</a>
+      <a href="#midnight-collection" class="nav-link">Midnight</a>
+    </div>
+  </nav>
+
+  <main class="relative z-10 w-full pt-16">
+
+
+
+    <!-- ════════════════════════════════════════
+         2. THE CRIMSON COLLECTION
+    ════════════════════════════════════════ -->
+    <section id="crimson-collection" class="w-full min-h-screen py-24 flex flex-col items-center">
+      
+      <!-- Editorial Hero -->
+      <div class="w-full max-w-[1440px] px-8 md:px-20 mb-32 relative aspect-[21/9] overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+          <img alt="The Crimson Legacy Hero" class="w-full h-full object-cover opacity-60 brightness-50 scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnnJg06qHZkSzAfDcfiuZtDKQ6EeB5Wq5GKG1BnRibcUN9g-I4cPsWU-IqAixN7O_0bhhV-pFjuNhG8F7VRfJNfp_kFONTrQBRsmE1RwTHCe0DOkq5JTkAYN8imTNuQvnDYtMPDtUI1PpgqzpRNr26fjdSD53zt6my4tLwa6qhCBwnG3svmleFQQgQrCgWij26Ny6siznQdzTTTJGdXuIwvAOrSlkhmOKkMd_Na21pco6f74MzV0XDg7f2RVmlaLGk8-qYxzG977U"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0E0507] via-transparent to-transparent"></div>
+        </div>
+        
+        <div class="relative z-10 text-center max-w-3xl px-6">
+          <span class="font-sans font-semibold text-[11px] tracking-[0.4em] text-red-500 uppercase mb-4 block">The Crimson Legacy</span>
+          <h1 class="font-serif text-5xl md:text-7xl text-red-100 mb-6 tracking-wide">The Crimson Standard</h1>
+          <div class="w-20 h-px bg-red-800/40 mx-auto mb-6"></div>
+          <p class="font-sans font-light text-base md:text-lg text-red-200 leading-relaxed max-w-xl mx-auto italic">
+            "A bold symphony of spicy saffron and deep damask rose. Crafted for those who lead with passion and leave a trail of fire."
+          </p>
+        </div>
+        <div class="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-[#0E0507] to-transparent pointer-events-none"></div>
+      </div>
+
+      <!-- Uniform Grid Gallery -->
+      <div class="w-full max-w-[1440px] px-8 md:px-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Product 1: Royal Rubis -->
+          <article class="group flex flex-col bg-stone-900/20 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 relative overflow-hidden border border-red-950/20 hover:border-red-800/50 reveal-scroll"
+                   onclick="window.veloraAddToCartAndOpenDrawer({
+                     title: 'Royal Rubis',
+                     price: 410,
+                     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuChbW0b4Dtt_5rijIjmEDZ6C968Vci3h7h0WysZZA1axVlvZimbZXlAw1yPYCfCl6IZVG8aMvlq5W7wVn-BXeaJdUwBr1sdumLj1RGeCZEZWzp4hREtLr2f6LlQ0KUK9Y36a2xH5nRZgGasWbrJlDJU34eGkIXFINuu6vzlXjRmkZfFAmXqDP1cb2l2cMntKQqew3Ael4mHHkaPJOmkMBwscTbwdjVlh0kDQNSlT8twZCuSWGPnd3qU2vcK-hK1zhhI07FjYgUtQCs',
+                     size: '100ml (Flagship Flacon)'
+                   })">
+            <div class="w-full aspect-[4/5] relative bg-[#0a0a0a] overflow-hidden flex items-center justify-center p-8 border-b border-white/5">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(196,30,58,0.06)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+              <img alt="Royal Rubis" class="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700 ease-out drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChbW0b4Dtt_5rijIjmEDZ6C968Vci3h7h0WysZZA1axVlvZimbZXlAw1yPYCfCl6IZVG8aMvlq5W7wVn-BXeaJdUwBr1sdumLj1RGeCZEZWzp4hREtLr2f6LlQ0KUK9Y36a2xH5nRZgGasWbrJlDJU34eGkIXFINuu6vzlXjRmkZfFAmXqDP1cb2l2cMntKQqew3Ael4mHHkaPJOmkMBwscTbwdjVlh0kDQNSlT8twZCuSWGPnd3qU2vcK-hK1zhhI07FjYgUtQCs"/>
+            </div>
+            <div class="p-8 flex flex-col items-center text-center relative z-10">
+              <span class="font-sans font-semibold text-[10px] text-gray-400 mb-2 tracking-widest uppercase">Resinous & Warm</span>
+              <h3 class="font-serif text-2xl text-red-200 mb-4">Royal Rubis</h3>
+              <p class="font-sans text-xs text-gray-400 mb-6">Fragrance Blend · £410</p>
+              <button class="relative pb-1 font-sans font-semibold text-xs text-red-400 uppercase group/btn overflow-hidden">
+                <span class="relative z-10">Add to Private Bag</span>
+                <div class="absolute bottom-0 left-0 w-full h-[1px] bg-red-950 group-hover/btn:bg-red-400 transition-colors duration-300"></div>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 2: Saffron Sultan -->
+          <article class="group flex flex-col bg-stone-900/20 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 relative overflow-hidden border border-red-950/20 hover:border-red-800/50 reveal-scroll"
+                   onclick="window.veloraAddToCartAndOpenDrawer({
+                     title: 'Saffron Sultan',
+                     price: 430,
+                     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDP0vcj5vq_uAbuWLlJ85kmlU3f7a19k8vQomGlNQW5LPE-mX15TbWHSc31G-dQYGwKp_rKk3x8n2f6qov6IsJMffyHlCY1NvrWSC11v3jleV7bIIrzv-ccRoQpoOOb8GemfwIjuDzpBKvCVZrcTnBHBYEj337FAvgDSH5l3lNoSog-hfFAJl_9vk0AGQiizEyIzXyYl7SZVZn4N5giq67lJM9bilM8cEBETdhL-WUXBxM-d6YZBo4ey8RZW1tOlesWEz9sAyCJj3M',
+                     size: '100ml (Flagship Flacon)'
+                   })">
+            <div class="w-full aspect-[4/5] relative bg-[#0a0a0a] overflow-hidden flex items-center justify-center p-8 border-b border-white/5">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(196,30,58,0.06)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+              <img alt="Saffron Sultan" class="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700 ease-out drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP0vcj5vq_uAbuWLlJ85kmlU3f7a19k8vQomGlNQW5LPE-mX15TbWHSc31G-dQYGwKp_rKk3x8n2f6qov6IsJMffyHlCY1NvrWSC11v3jleV7bIIrzv-ccRoQpoOOb8GemfwIjuDzpBKvCVZrcTnBHBYEj337FAvgDSH5l3lNoSog-hfFAJl_9vk0AGQiizEyIzXyYl7SZVZn4N5giq67lJM9bilM8cEBETdhL-WUXBxM-d6YZBo4ey8RZW1tOlesWEz9sAyCJj3M"/>
+            </div>
+            <div class="p-8 flex flex-col items-center text-center relative z-10">
+              <span class="font-sans font-semibold text-[10px] text-gray-400 mb-2 tracking-widest uppercase">Woody & Bold</span>
+              <h3 class="font-serif text-2xl text-red-200 mb-4">Saffron Sultan</h3>
+              <p class="font-sans text-xs text-gray-400 mb-6">Fragrance Blend · £430</p>
+              <button class="relative pb-1 font-sans font-semibold text-xs text-red-400 uppercase group/btn overflow-hidden">
+                <span class="relative z-10">Add to Private Bag</span>
+                <div class="absolute bottom-0 left-0 w-full h-[1px] bg-red-950 group-hover/btn:bg-red-400 transition-colors duration-300"></div>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 3: Oud Obsidian -->
+          <article class="group flex flex-col bg-stone-900/20 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 relative overflow-hidden border border-red-950/20 hover:border-red-800/50 reveal-scroll"
+                   onclick="window.veloraAddToCartAndOpenDrawer({
+                     title: 'Oud Obsidian',
+                     price: 460,
+                     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD2ORwrOjCiRR13eEGWL4kQrdzh2hqxprZ95mOs0q9iAHAlah6Aj1D1fjX3u-s29SCBr9DY3N5QYAv2KPCkShyQT92P5bcdSteU8IH-GsMlcrZYAb5LWPSfMOn6KzQ9MSphlBJBV6taxeuy1FR8N9WbHHL8sGmXblhDkVSf38o-2FnQgnCMI_OpnQgqFfyHQcLw6sbUAjLOOHAJjv6CPuFGIb8meU2VgBQyhjzFXg2TtIPseh6aycVnnAAyYSvg7-1929fWQnveb-I',
+                     size: '100ml (Flagship Flacon)'
+                   })">
+            <div class="w-full aspect-[4/5] relative bg-[#0a0a0a] overflow-hidden flex items-center justify-center p-8 border-b border-white/5">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(196,30,58,0.06)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+              <img alt="Oud Obsidian" class="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700 ease-out drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2ORwrOjCiRR13eEGWL4kQrdzh2hqxprZ95mOs0q9iAHAlah6Aj1D1fjX3u-s29SCBr9DY3N5QYAv2KPCkShyQT92P5bcdSteU8IH-GsMlcrZYAb5LWPSfMOn6KzQ9MSphlBJBV6taxeuy1FR8N9WbHHL8sGmXblhDkVSf38o-2FnQgnCMI_OpnQgqFfyHQcLw6sbUAjLOOHAJjv6CPuFGIb8meU2VgBQyhjzFXg2TtIPseh6aycVnnAAyYSvg7-1929fWQnveb-I"/>
+            </div>
+            <div class="p-8 flex flex-col items-center text-center relative z-10">
+              <span class="font-sans font-semibold text-[10px] text-gray-400 mb-2 tracking-widest uppercase">Smoky & Floral</span>
+              <h3 class="font-serif text-2xl text-red-200 mb-4">Oud Obsidian</h3>
+              <p class="font-sans text-xs text-gray-400 mb-6">Fragrance Blend · £460</p>
+              <button class="relative pb-1 font-sans font-semibold text-xs text-red-400 uppercase group/btn overflow-hidden">
+                <span class="relative z-10">Add to Private Bag</span>
+                <div class="absolute bottom-0 left-0 w-full h-[1px] bg-red-950 group-hover/btn:bg-red-400 transition-colors duration-300"></div>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 4: Imperial Garnet -->
+          <article class="group flex flex-col bg-stone-900/20 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 relative overflow-hidden border border-red-950/20 hover:border-red-800/50 reveal-scroll"
+                   onclick="window.veloraAddToCartAndOpenDrawer({
+                     title: 'Imperial Garnet',
+                     price: 420,
+                     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC3A9IB4nZqmXg4iEzRIE_iPldV48fSOi5QA4Id_m-1qcLCBkhJBP_gOAhUu08uOTBOW7U8npiFslU5C0_a9G23Yh0iOjg0wX_dBOmDMFWSytGfqrAXwNx5tkT5Zh3ubmrwoM1DlQPPB-ecQg8E6Pq0zLxyIc04sXkUK_3lILnmV3z82YmW6QnLh5gp2CLWNlCaU2VkZdHdfqqVjqgBQlvIUqY4ehSQseKPQirMsBrc0m7mSsJT7u_76UNuhq04D4wQR9JS9h3djHY',
+                     size: '100ml (Flagship Flacon)'
+                   })">
+            <div class="w-full aspect-[4/5] relative bg-[#0a0a0a] overflow-hidden flex items-center justify-center p-8 border-b border-white/5">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(196,30,58,0.06)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+              <img alt="Imperial Garnet" class="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700 ease-out drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3A9IB4nZqmXg4iEzRIE_iPldV48fSOi5QA4Id_m-1qcLCBkhJBP_gOAhUu08uOTBOW7U8npiFslU5C0_a9G23Yh0iOjg0wX_dBOmDMFWSytGfqrAXwNx5tkT5Zh3ubmrwoM1DlQPPB-ecQg8E6Pq0zLxyIc04sXkUK_3lILnmV3z82YmW6QnLh5gp2CLWNlCaU2VkZdHdfqqVjqgBQlvIUqY4ehSQseKPQirMsBrc0m7mSsJT7u_76UNuhq04D4wQR9JS9h3djHY"/>
+            </div>
+            <div class="p-8 flex flex-col items-center text-center relative z-10">
+              <span class="font-sans font-semibold text-[10px] text-gray-400 mb-2 tracking-widest uppercase">Smooth & Elegant</span>
+              <h3 class="font-serif text-2xl text-red-200 mb-4">Imperial Garnet</h3>
+              <p class="font-sans text-xs text-gray-400 mb-6">Fragrance Blend · £420</p>
+              <button class="relative pb-1 font-sans font-semibold text-xs text-red-400 uppercase group/btn overflow-hidden">
+                <span class="relative z-10">Add to Private Bag</span>
+                <div class="absolute bottom-0 left-0 w-full h-[1px] bg-red-950 group-hover/btn:bg-red-400 transition-colors duration-300"></div>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 5: Midnight Malbec -->
+          <article class="group flex flex-col bg-stone-900/20 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 relative overflow-hidden border border-red-950/20 hover:border-red-800/50 reveal-scroll"
+                   onclick="window.veloraAddToCartAndOpenDrawer({
+                     title: 'Midnight Malbec',
+                     price: 440,
+                     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBWnWkOvlQhVfwWDAEmBmci965oCFg_9Uc3QMatYH5QrRdRJyxiNX27iGkq8WIwOSqOQ-4OvIRo566pRzrhmjkhaWawXHSYoCRB7VYF7NKntwwb7KPDKiZApXzAKLj5_6vhD4Ns7jlzInzW-p5LcvtN1zNWJvLpOJmWibujRmCdGrTdvE9YAtAqu7jru9gQPKhtHzr3ranVb-0ai0ZxrjxfzUAVVgd0DqD1BtF2bQC2LuXSjeKGCUI6inigCVpmV4UMInuChcE8qEw',
+                     size: '100ml (Flagship Flacon)'
+                   })">
+            <div class="w-full aspect-[4/5] relative bg-[#0a0a0a] overflow-hidden flex items-center justify-center p-8 border-b border-white/5">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(196,30,58,0.06)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+              <img alt="Midnight Malbec" class="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700 ease-out drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWnWkOvlQhVfwWDAEmBmci965oCFg_9Uc3QMatYH5QrRdRJyxiNX27iGkq8WIwOSqOQ-4OvIRo566pRzrhmjkhaWawXHSYoCRB7VYF7NKntwwb7KPDKiZApXzAKLj5_6vhD4Ns7jlzInzW-p5LcvtN1zNWJvLpOJmWibujRmCdGrTdvE9YAtAqu7jru9gQPKhtHzr3ranVb-0ai0ZxrjxfzUAVVgd0DqD1BtF2bQC2LuXSjeKGCUI6inigCVpmV4UMInuChcE8qEw"/>
+            </div>
+            <div class="p-8 flex flex-col items-center text-center relative z-10">
+              <span class="font-sans font-semibold text-[10px] text-gray-400 mb-2 tracking-widest uppercase">Intense & Royal</span>
+              <h3 class="font-serif text-2xl text-red-200 mb-4">Midnight Malbec</h3>
+              <p class="font-sans text-xs text-gray-400 mb-6">Fragrance Blend · £440</p>
+              <button class="relative pb-1 font-sans font-semibold text-xs text-red-400 uppercase group/btn overflow-hidden">
+                <span class="relative z-10">Add to Private Bag</span>
+                <div class="absolute bottom-0 left-0 w-full h-[1px] bg-red-950 group-hover/btn:bg-red-400 transition-colors duration-300"></div>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 6: Sunset Sillage -->
+          <article class="group flex flex-col bg-stone-900/20 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 relative overflow-hidden border border-red-950/20 hover:border-red-800/50 reveal-scroll"
+                   onclick="window.veloraAddToCartAndOpenDrawer({
+                     title: 'Sunset Sillage',
+                     price: 395,
+                     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB_IBr83nry4ZlC81zFDr_Qqr-dxkkUWpkoLJZsQ1-niUDH14Rgrb7eO56k4HeWxWqlNkpWqqkMlvOVU-MFKXClKiJM5gHxeUvNOhMdCicSY5xeS3gNIjMqlYvx7QBF6WybIE9b8FsPw7HPWvlvrarwu8cQTAGN2nZMBkU8p6Yn5UmjqIohKAHMgR6dengnTDKNIF5N1NeEEnZwLXe2WmbomxiDDmUJtHTIvON94DriP1Mm4R_EkW5BpAnINVT8_-vgMJbGzKQqjRU',
+                     size: '100ml (Flagship Flacon)'
+                   })">
+            <div class="w-full aspect-[4/5] relative bg-[#0a0a0a] overflow-hidden flex items-center justify-center p-8 border-b border-white/5">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(196,30,58,0.06)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+              <img alt="Sunset Sillage" class="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700 ease-out drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_IBr83nry4ZlC81zFDr_Qqr-dxkkUWpkoLJZsQ1-niUDH14Rgrb7eO56k4HeWxWqlNkpWqqkMlvOVU-MFKXClKiJM5gHxeUvNOhMdCicSY5xeS3gNIjMqlYvx7QBF6WybIE9b8FsPw7HPWvlvrarwu8cQTAGN2nZMBkU8p6Yn5UmjqIohKAHMgR6dengnTDKNIF5N1NeEEnZwLXe2WmbomxiDDmUJtHTIvON94DriP1Mm4R_EkW5BpAnINVT8_-vgMJbGzKQqjRU"/>
+            </div>
+            <div class="p-8 flex flex-col items-center text-center relative z-10">
+              <span class="font-sans font-semibold text-[10px] text-gray-400 mb-2 tracking-widest uppercase">Graceful & Warm</span>
+              <h3 class="font-serif text-2xl text-red-200 mb-4">Sunset Sillage</h3>
+              <p class="font-sans text-xs text-gray-400 mb-6">Fragrance Blend · £395</p>
+              <button class="relative pb-1 font-sans font-semibold text-xs text-red-400 uppercase group/btn overflow-hidden">
+                <span class="relative z-10">Add to Private Bag</span>
+                <div class="absolute bottom-0 left-0 w-full h-[1px] bg-red-950 group-hover/btn:bg-red-400 transition-colors duration-300"></div>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         3. THE MIDNIGHT & OBSESSION COLLECTION
+    ════════════════════════════════════════ -->
+    <section id="midnight-collection" class="w-full min-h-screen py-24 flex flex-col items-center">
+      
+      <!-- Editorial Hero -->
+      <div class="w-full max-w-[1440px] px-8 md:px-20 mb-32 relative aspect-[21/9] overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+          <img alt="Midnight Legacy Hero" class="w-full h-full object-cover opacity-60 brightness-50 scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYN9yu_CE0dFHu8QZO02ZH_hpCKASUiBuUwtJCCcAqWq--Lsc4BS977UO7Hu6_e4w57_PeA96g0C9c-vDZh_YSncLsVTxmKfHu2u-fcgjIE_aCxRTzqCb1avLtezVr5RWV1hU_odeFNgDfmpOMV9tkhB4HEyLU7TTpFMhIgCrFRhne3OA2cV0QUOValC6S8dfApMeAy10qgnvlAUgTUcir5eYn7_yFCWVuadTd8-a9EbIL4INmRfVmh-kl4Ac2EKXI-l1bX9l-_P4"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#05050C] via-transparent to-transparent"></div>
+        </div>
+        
+        <div class="relative z-10 text-center max-w-3xl px-6">
+          <span class="font-sans font-semibold text-[11px] tracking-[0.4em] text-blue-500 uppercase mb-4 block">Midnight & Obsession</span>
+          <h1 class="font-serif text-5xl md:text-7xl text-blue-100 mb-6 tracking-wide">Midnight & Obsession</h1>
+          <div class="w-20 h-px bg-blue-950 mx-auto mb-6"></div>
+          <p class="font-sans font-light text-base md:text-lg text-blue-200 leading-relaxed max-w-xl mx-auto italic">
+            "Discover a gallery of sensory masterpieces. Each flacon is a testament to heritage craftsmanship, housing intoxicating blends designed for the connoisseur."
+          </p>
+        </div>
+        <div class="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-[#05050C] to-transparent pointer-events-none"></div>
+      </div>
+
+      <!-- Bento Staggered Grid Gallery -->
+      <div class="w-full max-w-[1440px] px-8 md:px-20 pb-32">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Product 1: Emerald Veil -->
+          <article class="group flex flex-col bg-stone-900/20 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 relative overflow-hidden border border-blue-950/20 hover:border-blue-800/50 reveal-scroll"
+                   onclick="window.veloraAddToCartAndOpenDrawer({
+                     title: 'Emerald Veil',
+                     price: 415,
+                     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAL1rpi-1AeW5DM6qJn4i6sFOQukRxBlw13zysA1H-vVR933h8RKM7XhpnmFcasoYDlQN_lY3g4qWfos9wCqPjNnbHqX0wRZg9f7fY3qByRN0pNJVxkJBPE98mheWXElGJwlx7UFlhQwz36HPPmP3DhjmLWvw13jF6k_UsvWdY7JGvt0hhqONTeTiXDS9XadM587OkX7KRlpnQNHhW8sbnvWwAy_XJlcqoeZLKcj63I5I5amblSyt9JCMeCXow8nQutdfjaYwCPD6U',
+                     size: '100ml (Flagship Flacon)'
+                   })">
+            <div class="w-full aspect-[4/5] relative bg-[#0a0a0a] overflow-hidden flex items-center justify-center p-8 border-b border-white/5">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(15,82,186,0.06)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+              <img alt="Emerald Veil" class="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700 ease-out drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL1rpi-1AeW5DM6qJn4i6sFOQukRxBlw13zysA1H-vVR933h8RKM7XhpnmFcasoYDlQN_lY3g4qWfos9wCqPjNnbHqX0wRZg9f7fY3qByRN0pNJVxkJBPE98mheWXElGJwlx7UFlhQwz36HPPmP3DhjmLWvw13jF6k_UsvWdY7JGvt0hhqONTeTiXDS9XadM587OkX7KRlpnQNHhW8sbnvWwAy_XJlcqoeZLKcj63I5I5amblSyt9JCMeCXow8nQutdfjaYwCPD6U"/>
+            </div>
+            <div class="p-8 flex flex-col items-center text-center relative z-10">
+              <span class="font-sans font-semibold text-[10px] text-gray-400 mb-2 tracking-widest uppercase">Woody & Aromatic</span>
+              <h3 class="font-serif text-2xl text-blue-200 mb-4">Emerald Veil</h3>
+              <p class="font-sans text-xs text-gray-400 mb-6">Fragrance Blend · £415</p>
+              <button class="relative pb-1 font-sans font-semibold text-xs text-blue-400 uppercase group/btn overflow-hidden">
+                <span class="relative z-10">Add to Private Bag</span>
+                <div class="absolute bottom-0 left-0 w-full h-[1px] bg-blue-950 group-hover/btn:bg-blue-400 transition-colors duration-300"></div>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 2: Amethyst Dusk (Staggered Down) -->
+          <article class="group flex flex-col bg-stone-900/20 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 relative overflow-hidden border border-blue-950/20 hover:border-blue-800/50 reveal-scroll md:mt-16"
+                   onclick="window.veloraAddToCartAndOpenDrawer({
+                     title: 'Amethyst Dusk',
+                     price: 435,
+                     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD-nfdV6VrtjbiNmN1v8WkO9DcPOgfbchijjzMJ-9Dhd8pPPvFbdgmDYoav_-qgNqYSB7O4Jzfo4rBW1UcwuRMZ_7XhibgK0v10gjxQqsMjZrQtTUZP5Xh377AWb-vpOcmNEs0qRgdqUNGHFQcPWNKcbwy2-WqAp90Qrd8-djnsAcMsQW7Ifp1Vspg62_O_zqX-_EEcBAlEvrvSYL-n-P4F4xZrOpwlZPslWUOMJtZsC11uALm1M1LUXfkiWVy1sApPr57K4lMmn7I',
+                     size: '100ml (Flagship Flacon)'
+                   })">
+            <div class="w-full aspect-[4/5] relative bg-[#0a0a0a] overflow-hidden flex items-center justify-center p-8 border-b border-white/5">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(15,82,186,0.06)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+              <img alt="Amethyst Dusk" class="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700 ease-out drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-nfdV6VrtjbiNmN1v8WkO9DcPOgfbchijjzMJ-9Dhd8pPPvFbdgmDYoav_-qgNqYSB7O4Jzfo4rBW1UcwuRMZ_7XhibgK0v10gjxQqsMjZrQtTUZP5Xh377AWb-vpOcmNEs0qRgdqUNGHFQcPWNKcbwy2-WqAp90Qrd8-djnsAcMsQW7Ifp1Vspg62_O_zqX-_EEcBAlEvrvSYL-n-P4F4xZrOpwlZPslWUOMJtZsC11uALm1M1LUXfkiWVy1sApPr57K4lMmn7I"/>
+            </div>
+            <div class="p-8 flex flex-col items-center text-center relative z-10">
+              <span class="font-sans font-semibold text-[10px] text-gray-400 mb-2 tracking-widest uppercase">Floral & Oriental</span>
+              <h3 class="font-serif text-2xl text-blue-200 mb-4">Amethyst Dusk</h3>
+              <p class="font-sans text-xs text-gray-400 mb-6">Fragrance Blend · £435</p>
+              <button class="relative pb-1 font-sans font-semibold text-xs text-blue-400 uppercase group/btn overflow-hidden">
+                <span class="relative z-10">Add to Private Bag</span>
+                <div class="absolute bottom-0 left-0 w-full h-[1px] bg-blue-950 group-hover/btn:bg-blue-400 transition-colors duration-300"></div>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 3: Sapphire Abyss -->
+          <article class="group flex flex-col bg-stone-900/20 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 relative overflow-hidden border border-blue-950/20 hover:border-blue-800/50 reveal-scroll"
+                   onclick="window.veloraAddToCartAndOpenDrawer({
+                     title: 'Sapphire Abyss',
+                     price: 425,
+                     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBJVaIJXtYDrSoj_o8L5dZcLHpS51IHY86erEFj9lCKDuW5WEU16U-Z40mJzrCa1KYjw4a1XQZnBC6IRAYwUjPbAmUI5f56yX06iPowFcceEDc92voUXcugo46grc_NnFAQaNCuRDW-qDEksecU-kZsAfhHHDxiQdNNYK5uL2XhPzmBtSmxmB1LA8Td5n-hjmNbEt78pibtPfPQHQ847x66d70W18EVwtf6ZQ2PhW7J5M_6rvcnPD0_Qr3KrZRWkuHqVLyKfUoCdKg',
+                     size: '100ml (Flagship Flacon)'
+                   })">
+            <div class="w-full aspect-[4/5] relative bg-[#0a0a0a] overflow-hidden flex items-center justify-center p-8 border-b border-white/5">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(15,82,186,0.06)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+              <img alt="Sapphire Abyss" class="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700 ease-out drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJVaIJXtYDrSoj_o8L5dZcLHpS51IHY86erEFj9lCKDuW5WEU16U-Z40mJzrCa1KYjw4a1XQZnBC6IRAYwUjPbAmUI5f56yX06iPowFcceEDc92voUXcugo46grc_NnFAQaNCuRDW-qDEksecU-kZsAfhHHDxiQdNNYK5uL2XhPzmBtSmxmB1LA8Td5n-hjmNbEt78pibtPfPQHQ847x66d70W18EVwtf6ZQ2PhW7J5M_6rvcnPD0_Qr3KrZRWkuHqVLyKfUoCdKg"/>
+            </div>
+            <div class="p-8 flex flex-col items-center text-center relative z-10">
+              <span class="font-sans font-semibold text-[10px] text-gray-400 mb-2 tracking-widest uppercase">Aquatic & Fresh</span>
+              <h3 class="font-serif text-2xl text-blue-200 mb-4">Sapphire Abyss</h3>
+              <p class="font-sans text-xs text-gray-400 mb-6">Fragrance Blend · £425</p>
+              <button class="relative pb-1 font-sans font-semibold text-xs text-blue-400 uppercase group/btn overflow-hidden">
+                <span class="relative z-10">Add to Private Bag</span>
+                <div class="absolute bottom-0 left-0 w-full h-[1px] bg-blue-950 group-hover/btn:bg-blue-400 transition-colors duration-300"></div>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 4: Amber Oud -->
+          <article class="group flex flex-col bg-stone-900/20 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 relative overflow-hidden border border-blue-950/20 hover:border-blue-800/50 reveal-scroll md:-mt-16 lg:mt-0"
+                   onclick="window.veloraAddToCartAndOpenDrawer({
+                     title: 'Amber Oud',
+                     price: 455,
+                     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDV9GiMH2c1KbjuHqKZFodTmXVCYHmRkfWiIGsAXULSmC6aZJ_es9d28BBUTtraEHVpMJNWhrkSE0ppD4vi3ePK-Kwj5QloYzIREBfbDR7DIL_1A18uNp8OM09mBFl1RtRZEMrhkaQtxAHgJGl_TirqFRcJ7Uy6IfCaIB0Qks__gSuc8qzGYbui7YQWu7YosnUWuCNQ_xUUmpqT0I1vkLbmeS2l4Letxl_pF7VAuPBwYM-fKa97kteus9RlnXTp8-Lz-4pYFhenViE',
+                     size: '100ml (Flagship Flacon)'
+                   })">
+            <div class="w-full aspect-[4/5] relative bg-[#0a0a0a] overflow-hidden flex items-center justify-center p-8 border-b border-white/5">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(15,82,186,0.06)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+              <img alt="Amber Oud" class="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700 ease-out drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV9GiMH2c1KbjuHqKZFodTmXVCYHmRkfWiIGsAXULSmC6aZJ_es9d28BBUTtraEHVpMJNWhrkSE0ppD4vi3ePK-Kwj5QloYzIREBfbDR7DIL_1A18uNp8OM09mBFl1RtRZEMrhkaQtxAHgJGl_TirqFRcJ7Uy6IfCaIB0Qks__gSuc8qzGYbui7YQWu7YosnUWuCNQ_xUUmpqT0I1vkLbmeS2l4Letxl_pF7VAuPBwYM-fKa97kteus9RlnXTp8-Lz-4pYFhenViE"/>
+            </div>
+            <div class="p-8 flex flex-col items-center text-center relative z-10">
+              <span class="font-sans font-semibold text-[10px] text-gray-400 mb-2 tracking-widest uppercase">Spicy & Warm</span>
+              <h3 class="font-serif text-2xl text-blue-200 mb-4">Amber Oud</h3>
+              <p class="font-sans text-xs text-gray-400 mb-6">Fragrance Blend · £455</p>
+              <button class="relative pb-1 font-sans font-semibold text-xs text-blue-400 uppercase group/btn overflow-hidden">
+                <span class="relative z-10">Add to Private Bag</span>
+                <div class="absolute bottom-0 left-0 w-full h-[1px] bg-blue-950 group-hover/btn:bg-blue-400 transition-colors duration-300"></div>
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 5: Rose Noir (Staggered Down) -->
+          <article class="group flex flex-col bg-stone-900/20 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 relative overflow-hidden border border-blue-950/20 hover:border-blue-800/50 reveal-scroll md:mt-0 lg:mt-16"
+                   onclick="window.veloraAddToCartAndOpenDrawer({
+                     title: 'Rose Noir',
+                     price: 445,
+                     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAIEuQOf2uWoHegCxmwyGFquUeH23Oa1JrIHVvuuUy25BANpHIB1IT-aHPKYMXU6M-wzmOLo51-JD1Qn-GckCCp6Rlu_sYndMFh8dY5UASs2eVpV3UVpsBKg1YqIPpCgLIHg_jYI7GfEJ5wW55wm28tu1xo_sqH28IChfYBf-1fp6yPE2uhVXXgQr8RnpNIXDUySGQ0bkAk16SmwMNGO5NsJ-9ak1KHbxjFu-IkJGCM359hTaQfjpp_WOT6NWTRCoADTNGQh6bcGSI',
+                     size: '100ml (Flagship Flacon)'
+                   })">
+            <div class="w-full aspect-[4/5] relative bg-[#0a0a0a] overflow-hidden flex items-center justify-center p-8 border-b border-white/5">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(15,82,186,0.06)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+              <img alt="Rose Noir" class="w-full h-full object-contain relative z-10 group-hover:scale-105 transition-transform duration-700 ease-out drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIEuQOf2uWoHegCxmwyGFquUeH23Oa1JrIHVvuuUy25BANpHIB1IT-aHPKYMXU6M-wzmOLo51-JD1Qn-GckCCp6Rlu_sYndMFh8dY5UASs2eVpV3UVpsBKg1YqIPpCgLIHg_jYI7GfEJ5wW55wm28tu1xo_sqH28IChfYBf-1fp6yPE2uhVXXgQr8RnpNIXDUySGQ0bkAk16SmwMNGO5NsJ-9ak1KHbxjFu-IkJGCM359hTaQfjpp_WOT6NWTRCoADTNGQh6bcGSI"/>
+            </div>
+            <div class="p-8 flex flex-col items-center text-center relative z-10">
+              <span class="font-sans font-semibold text-[10px] text-gray-400 mb-2 tracking-widest uppercase">Floral & Powdery</span>
+              <h3 class="font-serif text-2xl text-blue-200 mb-4">Rose Noir</h3>
+              <p class="font-sans text-xs text-gray-400 mb-6">Fragrance Blend · £445</p>
+              <button class="relative pb-1 font-sans font-semibold text-xs text-blue-400 uppercase group/btn overflow-hidden">
+                <span class="relative z-10">Add to Private Bag</span>
+                <div class="absolute bottom-0 left-0 w-full h-[1px] bg-blue-950 group-hover/btn:bg-blue-400 transition-colors duration-300"></div>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer aria-label="Site footer" class="relative z-10 border-t border-white/5" style="background: #050508;">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="footer-logo"><a href="index.html">VELORA</a></p>
+        <p>Maison de Parfum<br />Paris · London · Dubai · New York</p>
+      </div>
+      <div class="footer-col">
+        <h4>Collections</h4>
+        <ul>
+          <li><a href="pour-femme.html">Pour Femme</a></li>
+          <li><a href="imperial.html">Imperial</a></li>
+          <li><a href="nocturne.html">Nocturne</a></li>
+          <li><a href="eternite.html">Éternité</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Maison</h4>
+        <ul>
+          <li><a href="index.html#story">Our Heritage</a></li>
+          <li><a href="index.html#notes">The Craft</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Concierge</h4>
+        <ul>
+          <li><a href="mailto:hello@velora.com">hello@velora.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 VELORA. All rights reserved.</span>
+      <div class="social-links">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+        <a href="https://pinterest.com" target="_blank" rel="noopener" aria-label="Pinterest">Pinterest</a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok">TikTok</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Global Engine Scripts ── -->
+  <script src="js/product.js"></script>
+
+  <!-- Custom Showcase Interaction Script -->
+  <script>
+    // 1. Entrance sweep curtain animation control
+    window.addEventListener('DOMContentLoaded', () => {
+      const curtain = document.getElementById('showcase-curtain');
+      const logo = document.getElementById('showcase-logo');
+      
+      // Delay slightly for visual pacing, then lift curtain
+      setTimeout(() => {
+        if (logo) {
+          logo.style.opacity = '0';
+          logo.style.transform = 'scale(1.1) translateY(-20px)';
+        }
+        setTimeout(() => {
+          if (curtain) {
+            curtain.style.transform = 'translateY(-100%)';
+          }
+        }, 300);
+      }, 500);
+    });
+
+    // 2. Ambient scroll shifting mechanics
+    const body = document.body;
+    const ambientOverlay = document.getElementById('ambient-overlay');
+    const sections = [
+      { id: 'crimson-collection', bg: '#0E0507', glow: 'radial-gradient(circle at 50% 50%, rgba(196, 30, 58, 0.05) 0%, transparent 70%)' },
+      { id: 'midnight-collection', bg: '#05050C', glow: 'radial-gradient(circle at 50% 50%, rgba(15, 82, 186, 0.05) 0%, transparent 70%)' }
+    ];
+
+    window.addEventListener('scroll', () => {
+      let activeSec = sections[0];
+      
+      sections.forEach(sec => {
+        const el = document.getElementById(sec.id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          // Shift active section when it is 40% scrolled into the window
+          if (rect.top <= window.innerHeight * 0.4) {
+            activeSec = sec;
+          }
+        }
+      });
+
+      body.style.backgroundColor = activeSec.bg;
+      if (ambientOverlay) {
+        ambientOverlay.style.background = activeSec.glow;
+      }
+    }, { passive: true });
+
+    // 3. Scroll Reveal Interactions using IntersectionObserver
+    const revealElements = document.querySelectorAll('.reveal-scroll');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>

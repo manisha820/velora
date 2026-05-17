@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velora Imperial — VELORA Parfums</title>
+  <meta name="description" content="Velora Imperial — Oud noir and saffron interlocked with resins of eternity." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/product.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+</head>
+<body class="product-page">
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+
+  <nav class="product-nav" id="product-nav">
+    <div class="nav-left">
+      <a href="index.html#collection" class="nav-link nav-back">
+        <span class="material-symbols-outlined">arrow_back</span>
+        <span>Collections</span>
+      </a>
+    </div>
+    <div class="nav-center">
+      <a href="index.html" class="nav-logo">VELORA</a>
+    </div>
+    <div class="nav-right">
+      <a href="index.html#story" class="nav-link">Heritage</a>
+      <a href="index.html#notes" class="nav-link">The Craft</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="product-hero product-hero--fullscreen" id="product-hero">
+    <div class="hero-fullscreen-bg" style="overflow: hidden;">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8YXJu6lsl9mGroqFWkED9AGKPzbOevLiBinuos9RsH-6xfF5q293s0hgRl303TLKRW0hQKgTUc7F5fz5kRFMJKA8eSZZnLuNN1e_E0ROXFzAMUAY768y0ThDxdcz1RHInS0fgcXmv82lRUNdgNkvlVCTRniEEbrTm_M2vGn72DWEv982komd1zA_WEx1Oq5QmR9GMZykOIfFYUSFkCO2wlBmxyBFRGyX_HcbNB8VsbNwi1ZkSqcqu2roxMNg6L-7qIorPPq6HfGpm" alt="Velora Imperial perfume background" class="hero-fullscreen-img" style="filter: blur(8px) brightness(0.45); transform: scale(1.05); transition: filter 1s var(--ease-royal);" />
+      <div class="hero-fullscreen-gradient-bottom"></div>
+      <div class="hero-fullscreen-gradient-left"></div>
+    </div>
+    
+    <!-- Foreground Bottle Presentation -->
+    <div class="imperial-foreground-presentation reveal reveal-delay-2">
+      <div class="imperial-bottle-frame">
+        <img src="assets/imperial-bottle.jpg" alt="Velora Imperial Premium Purple Bottle" class="imperial-bottle-focus-img" />
+        <div class="imperial-frame-border"></div>
+      </div>
+    </div>
+    <div class="hero-fullscreen-content">
+      <p class="product-eyebrow reveal">The Archive Collection</p>
+      <h1 class="product-title reveal reveal-delay-1">Velora Imperial</h1>
+      <p class="product-description reveal reveal-delay-2">The masterpiece of the Velora collection. Rich oud noir and saffron intertwined with deep eternal resins, creating a bold and luxurious signature scent.</p>
+      
+      <!-- ── Dynamic Price Display ── -->
+      <div class="product-price-row reveal reveal-delay-2">
+        <span class="product-price" data-base-price="595">£595</span>
+        <span class="product-size-label">50ml / 1.7 oz Parfum</span>
+      </div>
+
+      <!-- ── Customizer Option: Size & Quantity ── -->
+      <div class="product-customizer reveal reveal-delay-2">
+        <div class="customizer-row">
+          <span class="customizer-label">Select Volume</span>
+          <div class="size-capsules">
+            <button class="size-capsule active" data-size="50ml" data-offset="0">50 ml</button>
+            <button class="size-capsule" data-size="100ml" data-offset="150">100 ml</button>
+            <button class="size-capsule" data-size="200ml" data-offset="400">200 ml</button>
+          </div>
+        </div>
+        <div class="customizer-row">
+          <span class="customizer-label">Quantity</span>
+          <div class="page-qty-selector">
+            <button class="page-qty-btn minus-btn" aria-label="Decrease quantity">
+              <span class="material-symbols-outlined">remove</span>
+            </button>
+            <span class="page-qty-val">1</span>
+            <button class="page-qty-btn plus-btn" aria-label="Increase quantity">
+              <span class="material-symbols-outlined">add</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-cta-group reveal reveal-delay-3">
+        <button class="btn-royal product-cta"><span>Add to Cart</span></button>
+        <button class="btn-icon-circle btn-wishlist" aria-label="Add to Wishlist">
+          <span class="material-symbols-outlined">favorite_border</span>
+        </button>
+      </div>
+      <div class="reveal reveal-delay-3" style="margin-top: 1rem; text-align: left;">
+        <a href="#scent-profile" class="btn-text-link">Discover the Notes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scent Alchemy -->
+  <section class="scent-profile scent-profile--alchemy" id="scent-profile">
+    <div class="alchemy-grid">
+      <div class="alchemy-text">
+        <h2 class="section-title reveal" style="text-align:left;">The Alchemy of Scent</h2>
+        <p class="section-body reveal reveal-delay-1">A cinematic journey through rare ingredients. The opening is sharp and commanding, settling into a heart of liquid gold, before resting on a foundation of ancient woods.</p>
+        <div class="ingredient-group reveal reveal-delay-2">
+          <p class="ingredient-label">Top Notes</p>
+          <div class="ingredient-chips">
+            <span class="ingredient-chip">Saffron</span>
+            <span class="ingredient-chip">Black Pepper</span>
+          </div>
+        </div>
+        <div class="ingredient-group reveal reveal-delay-2">
+          <p class="ingredient-label">Heart Notes</p>
+          <div class="ingredient-chips">
+            <span class="ingredient-chip">Oud Noir</span>
+            <span class="ingredient-chip">Damascus Rose</span>
+          </div>
+        </div>
+        <div class="ingredient-group reveal reveal-delay-3">
+          <p class="ingredient-label">Base Notes</p>
+          <div class="ingredient-chips">
+            <span class="ingredient-chip">Eternal Resins</span>
+            <span class="ingredient-chip">Dark Amber</span>
+          </div>
+        </div>
+      </div>
+      <div class="alchemy-visual reveal">
+        <div class="alchemy-circle">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAqmF2dXi71FRoL73py40uFbjoyLiWL7QM63RPDTGvwgLYf6QoLlLRSkDe0oHhmez1sXkqKysLcoH_ZZuh95XzH0nG0PWHUq9oVy3iRtSbhnoZl3-HZmsW1tELabxBS9MFB55k82770JHVWuZu_ZmHDLaD5mLw9xo07oQMJ7mwOYkUNlmMTF_fxZrukiJkSwd4U-vLQSE2XCcQu93bLkBMewckdyEzo9GU0_gvcYXJaXIM9CO9vn0QVE0nNAqPcAGq5UBZktayC6FE" alt="Amber resin" class="alchemy-circle-img" />
+          <div class="alchemy-circle-overlay"></div>
+          <div class="alchemy-ring alchemy-ring--outer"></div>
+          <div class="alchemy-ring alchemy-ring--inner"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer aria-label="Site footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="footer-logo"><a href="index.html">VELORA</a></p>
+        <p>Maison de Parfum<br />Paris · London · Dubai · New York</p>
+      </div>
+      <div class="footer-col">
+        <h4>Collections</h4>
+        <ul>
+          <li><a href="pour-femme.html">Pour Femme</a></li>
+          <li><a href="imperial.html">Imperial</a></li>
+          <li><a href="nocturne.html">Nocturne</a></li>
+          <li><a href="eternite.html">Éternité</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Maison</h4>
+        <ul>
+          <li><a href="index.html#story">Our Heritage</a></li>
+          <li><a href="index.html#notes">The Craft</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Concierge</h4>
+        <ul><li><a href="mailto:hello@velora.com">hello@velora.com</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 VELORA. All rights reserved.</span>
+      <div class="social-links">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+        <a href="https://pinterest.com" target="_blank" rel="noopener" aria-label="Pinterest">Pinterest</a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok">TikTok</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/product.js"></script>
+</body>
+</html>
