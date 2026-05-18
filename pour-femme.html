@@ -38,12 +38,16 @@
   <!-- ── HERO PRODUCT SECTION ── -->
   <section class="product-hero" id="product-hero">
     <div class="product-hero-image">
-      <div class="product-image-frame">
+      <div class="product-image-frame" style="position:relative;">
         <img
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNFZoHaVh7Sq7a6lQDV51hP0PblZNe1gEhrW-0zRvNbVr2Od4uMXRjTz2cbdUsq6yV9DrjYIbB3hTX8PUo3ifAk5Ruo22XzM4V5xJGbB8ZB-jXWeBhkMGyMVeev6yqmZF7GKUrnWxyW6H51wN43MpCW22mtjxcDhBnLbDhh7giqHETaWYfxXcn1We830iWc0wh8JXHJIO5ne5gcbSlNAgWi7UNf9w-0_ZAhDkPwCQCZlWysWIvxQTqHggGDDaWUy1UrwWBuTy8Qhpv"
           alt="Cinematic product shot of the Velora Pour Femme soft pink and gold perfume bottle surrounded by delicate jasmine and iris petals"
           class="product-img"
         />
+        <!-- Erase Center Third-Party Branding & Velora Text -->
+        <div style="position:absolute;top:52%;left:50%;transform:translate(-50%,-50%);width:55px;height:55px;border-radius:50%;backdrop-filter:blur(18px) saturate(1.2);background:rgba(10,10,10,0.15);pointer-events:none;z-index:20;"></div>
+        <!-- Erase Low-lying Third-Party Text -->
+        <div style="position:absolute;bottom:22%;left:50%;transform:translateX(-50%);width:50px;height:28px;border-radius:50%;backdrop-filter:blur(16px);background:rgba(10,10,10,0.1);pointer-events:none;z-index:15;"></div>
         <div class="product-image-border"></div>
       </div>
     </div>

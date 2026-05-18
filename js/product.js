@@ -1,9 +1,14 @@
 /* ─── js/product.js ─── */
 /* Shared logic for all product detail pages, now featuring an instant premium checkout experience */
 
-// Supabase Global Credentials
-const SUPABASE_URL = 'https://srpvngufspadzxhyvrun.supabase.co';
-const SUPABASE_KEY = 'sb_publishable_VoCf-zE_YnyGbcbTCkMe7w_yHEJnwSV';
+// Supabase Global Credentials (supports both local offline and secure cloud mode)
+const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+const SUPABASE_URL = isLocalhost 
+  ? (localStorage.getItem('velora_local_supabase_url') || 'http://127.0.0.1:54321')
+  : 'https://srpvngufspadzxhyvrun.supabase.co';
+const SUPABASE_KEY = isLocalhost 
+  ? (localStorage.getItem('velora_local_supabase_key') || 'sb_publishable_VoCf-zE_YnyGbcbTCkMe7w_yHEJnwSV')
+  : 'sb_publishable_VoCf-zE_YnyGbcbTCkMe7w_yHEJnwSV';
 let supabase = null;
 
 // Dynamic Script Loader for Supabase SDK

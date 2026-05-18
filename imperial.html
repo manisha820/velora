@@ -42,8 +42,12 @@
     
     <!-- Foreground Bottle Presentation -->
     <div class="imperial-foreground-presentation reveal reveal-delay-2">
-      <div class="imperial-bottle-frame">
+      <div class="imperial-bottle-frame" style="position:relative;">
         <img src="assets/imperial-bottle.jpg" alt="Velora Imperial Premium Purple Bottle" class="imperial-bottle-focus-img" />
+        <!-- Erase Center Third-Party Branding & Velora Text -->
+        <div style="position:absolute;top:52%;left:50%;transform:translate(-50%,-50%);width:55px;height:55px;border-radius:50%;backdrop-filter:blur(18px) saturate(1.2);background:rgba(10,10,10,0.15);pointer-events:none;z-index:20;"></div>
+        <!-- Erase Low-lying Third-Party Text -->
+        <div style="position:absolute;bottom:22%;left:50%;transform:translateX(-50%);width:50px;height:28px;border-radius:50%;backdrop-filter:blur(16px);background:rgba(10,10,10,0.1);pointer-events:none;z-index:15;"></div>
         <div class="imperial-frame-border"></div>
       </div>
     </div>

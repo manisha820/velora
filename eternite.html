@@ -35,8 +35,12 @@
   <!-- Hero -->
   <section class="product-hero" id="product-hero">
     <div class="product-hero-image">
-      <div class="product-image-frame product-image-frame--ethereal">
+      <div class="product-image-frame product-image-frame--ethereal" style="position:relative;">
         <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-znfKGxCaA_tDBz7z_mml6vqB-nmC0kdjv6cf7CxuoW6fA-p5vt9ahupZAZC0XDktpCEyOFFN_WJAMmepzXfEUDNf38o5uxG8H1rQfit9BYl0ZDCV8goVKuekK0C2lSE52AU01fJN8lt_4gLhm5oHYVNbBoZoodP3kA93ckFLBM3_TvOnru3teBsvHhFCdYePsnbWRyX7f1fkqLhpShcXSGU1Il_h9FRwnSVvdmZuFi3oOeCpizQGzcD5axPaW3u_8rsSLnNDkdk1" alt="Velora Éternité perfume with neroli clouds and sandalwood" class="product-img" />
+        <!-- Erase Center Third-Party Branding & Velora Text -->
+        <div style="position:absolute;top:52%;left:50%;transform:translate(-50%,-50%);width:55px;height:55px;border-radius:50%;backdrop-filter:blur(18px) saturate(1.2);background:rgba(10,10,10,0.15);pointer-events:none;z-index:20;"></div>
+        <!-- Erase Low-lying Third-Party Text -->
+        <div style="position:absolute;bottom:22%;left:50%;transform:translateX(-50%);width:50px;height:28px;border-radius:50%;backdrop-filter:blur(16px);background:rgba(10,10,10,0.1);pointer-events:none;z-index:15;"></div>
         <div class="product-image-border"></div>
       </div>
     </div>
